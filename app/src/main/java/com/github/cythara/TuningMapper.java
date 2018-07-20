@@ -12,6 +12,7 @@ import com.github.cythara.tuning.OpenGGuitarTuning;
 import com.github.cythara.tuning.UkuleleDTuning;
 import com.github.cythara.tuning.UkuleleTuning;
 import com.github.cythara.tuning.ViolinTuning;
+import com.github.cythara.tuning.ViolaTuning;
 
 class TuningMapper {
 
@@ -24,7 +25,8 @@ class TuningMapper {
     private static final int UKULELE_TUNING_POSITION = 6;
     private static final int D_TUNING_POSITION = 7;
     private static final int VIOLIN_TUNING_POSITION = 8;
-    private static final int CHROMATIC_TUNING_POSITION = 9;
+    private static final int VIOLA_TUNING_POSITION = 9;
+    private static final int CHROMATIC_TUNING_POSITION = 10;
 
     static Tuning getTuningFromPosition(int position) {
         switch (position) {
@@ -46,6 +48,8 @@ class TuningMapper {
                 return new UkuleleDTuning();
             case VIOLIN_TUNING_POSITION:
                 return new ViolinTuning();
+            case VIOLA_TUNING_POSITION:
+                return new ViolaTuning();
             case CHROMATIC_TUNING_POSITION:
                 return new ChromaticTuning();
             default:
